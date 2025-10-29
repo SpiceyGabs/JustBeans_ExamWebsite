@@ -48,15 +48,25 @@ const validateInputs = () => {
     //now we check if the following are empty strings or if there are values
 
     if(usernameValue === '') {
-         setError(username,'Username is Required');                //this will add the red border to our input field if there's an error 
-    } else }
-        setSuccess(username); 
+        setError(username, 'Username is required');
+        } else {
+            setSuccess(username);
     }
 
     if(emailValue === '') {
-         setError(username,'Email is Required');                //this will add the red border to our input field if there's an error 
-    } else }
-        setSuccess(username); 
+        setError(email, 'Email is required');
+     } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+        } else {
+        setSuccess(email);
+    }
+
+    if(passwordValue === '') {
+        setError(password, 'Password is required');
+        } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+        } else {
+        setSuccess(password);
     }
 
 };
