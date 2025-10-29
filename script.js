@@ -14,22 +14,24 @@ form.addEventListener('submit', e => {
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
-    inputControl.querySelector('.error');
-    errorDisplay.innertext= message;   //this error message will display in the parameters
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;   //this error message will display in the parameters
     inputControl.classList.add('error');
     inputControl.classList.remove('success');  //removes the success class if an error is present
-}
+};
 
 
  const setSuccess = element => {
    const inputControl =element.parentElement;
-   inputControl.querySelector('.error');
+   const errorDisplay = inputControl.querySelector('.error');
+
+   errorDisplay.innerText = '';    //this clears the previous error 
     inputControl.classList.remove('error');
     inputControl.classList.add('success');
-
-
  };
 
+ 
 //Is valid email checker from source: "Form Validation using Javascript on the client side for beginners", JavaScript Academy, 2021.
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
