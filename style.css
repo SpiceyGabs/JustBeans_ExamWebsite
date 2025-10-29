@@ -1,15 +1,15 @@
 body {
-    background: ;
+    /* background: ; */
     font-family: '', sans-serif;
-}
+} 
 
 #form {
-    width: 300px;
+    width: 400px;
     margin: 20vh auto 0 auto;
     padding: 20px;
     background-color: rgb(197, 197, 197);
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #form h1 {

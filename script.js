@@ -13,8 +13,8 @@ form.addEventListener('submit', e => {
 //This is for if there are empty strings for the input values
 
 const setError = (element, message) => {
-    const inputControl = elements.parentElement;
-    const errorDisplay = inputControl.Control.querySelector('.error');
+    const inputControl = element.parentElement;
+    inputControl.querySelector('.error');
     errorDisplay.innertext= message;   //this error message will display in the parameters
     inputControl.classList.add('error');
     inputControl.classList.remove('success');  //removes the success class if an error is present
@@ -23,8 +23,7 @@ const setError = (element, message) => {
 
  const setSuccess = element => {
    const inputControl =element.parentElement;
-   const errorDisplay = inputControl.Control.querySelector('.error');
-    errorDisplay.innertext= message; 
+   inputControl.querySelector('.error');
     inputControl.classList.remove('error');
     inputControl.classList.add('success');
 
