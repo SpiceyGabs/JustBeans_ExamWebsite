@@ -27,12 +27,12 @@ body {
     border-radius: 4px;
 }
 
-.input-control {
+.inputControl {
     display: flex;
     flex-direction: column;
 }
 
-.input-control input {
+.inputControl input {
     border: 2px solid #070372;
 	border-radius: 4px;
 	display: block;
@@ -41,19 +41,19 @@ body {
 	width: 100%;
 }
 
-.input-control input:focus {
+.inputControl input:focus {
     outline: 0;
 }
 
-.input-control.success input {
+.inputControl.success input {
     border-color: #09c372;
 }
 
-.input-control.error input {
+.inputControl.error input {
     border-color: #ff3860;
 }
 
-.input-control .error {
+.inputControl .error {
     color: #ff3860;
     font-size: 9px;
     height: 13px;
