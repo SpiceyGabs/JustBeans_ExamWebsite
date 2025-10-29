@@ -32,7 +32,10 @@ const setError = (element, message) => {
  };
 
 //Is valid email checker from source: "Form Validation using Javascript on the client side for beginners", JavaScript Academy, 2021.
-
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 //trim removes all the wide spaces at the end of a string.
 //the following are validation conditions
