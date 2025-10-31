@@ -6,6 +6,7 @@ header {
 body {
     /* background: ; */
     font-family: '', sans-serif;
+    margin: 2rem;
 } 
 
 #form {
