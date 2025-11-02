@@ -15,13 +15,23 @@
   <h2>Insert Banner</h2>
 </header>
 
-<nav class="nav">
-  <ul class="dropdownNavList">
-    <li><a href="./Pages/Products.html" class="navLink">Products</a></li>
-    <li><a href="./Pages/form.html" class="navLink">Login</a></li>
-    <li><a href="./Pages/FeaturedProducts.html" class="navLink">Featured</a></li>
-  </ul>
-</nav>
+    <nav class="mainNav">
+        <div class="offScreenMenu">
+            <ul class="dropdownNavList">
+                <li><a href="./Pages/Products.html" class="navLink">Products</a></li>
+                <li><a href="./Pages/Forms.html" class="navLink">Login</a></li>
+                <li><a href="./Pages/FeaturedProducts.html" class="navLink">Featured</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav>
+             <div class="hamburgerMenu">         <!--lines in the toggle menu -->
+                 <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    </nav>
 
     <h1> JustBeans!</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloremque harum, perspiciatis aperiam obcaecati ea
@@ -48,7 +58,7 @@
             <div class="inputControl">
                 <label for="username">Username</label> <br>
                 <input id="username" name="username" type="text">           <!-- We'll use this ID to grab the username(DOM element) from the javascript -->
-            <div class="error"></div>                                   <!-- Contains error messages specific to this field --> 
+            <div class="error"></div>                                       <!-- Contains error messages specific to this field --> 
             </div>
 
             <div class="inputControl">

@@ -14,6 +14,66 @@ header {
     font-size: 12px;
 }
 
+.offScreenMenu {
+    background-color: #3c2e27; 
+    
+    /*#faf3e7;
+     text: #3c2e27; */
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    top: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3.5rem;
+    transition: .3s;               /*REPLACE WITH GSAP*/
+}
+
+.offScreenMenu.active  {          /*Replace this too :0 */
+    right: 0;
+}
+
+.mainNav{
+    height: 50px;
+    width: 50px;
+    margin-left: auto ;   /*yeah*/ 
+    position: relative;   /*childrens span needs to be relative to parent below */
+
+}
+
+.hamburgerMenu span {
+    height: 5px;
+    width: 100%;
+    background-color:#faf3e7; 
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate (-50%,-50%);
+    transition: .3s ease;
+} 
+
+.hamburgerMenu span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+
+}
+
+.hamburgerMenu span:nth-child(2) {
+    opacity: 0;                                    /*hides the second line in the toggle menu*/ 
+}
+
+.hamburgerMenu span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+
 body {
     /* background: ; */
     font-family: '', sans-serif;
