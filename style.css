@@ -172,3 +172,24 @@ body {
 
 
 }
+
+.galleryGrid {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 5px;       
+  justify-content: center;
+}
+
+.gridImg {
+  flex: 1 1 calc(33.333% - 10px); /* 3 per row, minus the gap */
+  max-width: calc(33.333% - 10px);
+  height: 105px;
+  object-fit: cover;
+  border-radius: 10px;
+  /* cursor: pointer; 
+  transition: transform 0.2s;*/ 
+}
+/* 
+.gridImg:hover {
+  transform: scale(1.05);
+} */
