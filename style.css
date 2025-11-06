@@ -92,7 +92,20 @@ body {
     /* background: ; */
     font-family: '', sans-serif;
     margin: 2rem;
+    padding: 2rem;
+    background-color: #0b2239;
+    color:#3c2e27;
 } 
+
+.products {
+    background-color: #f1f1f1;    /*changed the background colour to this BECAUSE it looks better*/ 
+
+}
+
+.featuredProducts{
+    color: #f1f1f1;
+    font-weight: 200;
+}
 
 #form {
     width: 400px;
