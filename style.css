@@ -180,7 +180,7 @@ body {
 .galleryGrid {
   display: flex;
   flex-wrap: wrap; 
-  gap: 5px;       
+  gap: 10px;       
   justify-content: center;
 
 }
