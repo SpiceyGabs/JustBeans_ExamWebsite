@@ -27,7 +27,7 @@ body {
   padding: 0 2rem;
   z-index: 1000;
   border-bottom: 2px solid #e9dcc5;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 10px #081216;
 }
 
 .logoContainer img {
