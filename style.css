@@ -97,17 +97,6 @@ body {
     color:#3c2e27;
 } 
 
-.products {
-    background-color: #f1f1f1;    /*changed the background colour to this BECAUSE it looks better*/ 
-    border-radius: 0.9rem;
-    text-align: center;
-}
-
-.featuredProducts{
-    color: #f1f1f1;
-    font-weight: 200;
-}
-
 #form {
     width: 400px;
     margin: 20vh auto 0 auto;
@@ -165,20 +154,35 @@ body {
     height: 13px;
 }
 
+.products {
+    background-color: #f1f1f1;    /*changed the background colour to this BECAUSE it looks better*/ 
+    border-radius: 0.9rem;
+}
+
+.featuredProducts{
+    color: #f1f1f1;
+    font-weight: 200;
+}
+
 .productName {
     margin: 2rem;
     background-color: #0f2027;
     font-family:  'Lucida Grande',  Geneva, sans-serif;
     font-size: 12px;
-
-
 }
+
+.products h2{
+    text-align: center;
+}
+
+
 
 .galleryGrid {
   display: flex;
   flex-wrap: wrap; 
   gap: 5px;       
   justify-content: center;
+
 }
 
 .gridImg {
@@ -194,3 +198,43 @@ body {
 .gridImg:hover {
   transform: scale(1.05);
 } */
+
+/* Each grid item */
+.galleryGrid .galleryImg {
+  flex: 1 1 calc(33.333% - 10px); /* 3 per row */
+  max-width: calc(33.333% - 10px);
+  aspect-ratio: 1 / 1;             /* keeps width & height proportional */
+  object-fit: cover;               /* crop to fill box nicely */
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+
+.featuredProducts {
+  padding: 20px;
+  background-color: #0f2027; /* dark bg example */
+  color: #f1f1f1;
+  font-family: sans-serif;
+}
+
+.featuredProducts h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive: 2 per row on tablets */
+@media (max-width: 768px) {
+  .galleryGrid .galleryImg {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* Responsive: 1 per row on mobile */
+@media (max-width: 480px) {
+  .galleryGrid .galleryImg {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
