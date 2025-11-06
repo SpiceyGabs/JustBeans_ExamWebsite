@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sisanda Gabela">
     <title>JustBeans-Homepage</title>
+
 <link rel="stylesheet" href="./style.css">
+
+
 <script defer src="./Scripts/script.js"></script>
 <script src="./Scripts/hamMenu.js" defer></script>
+<script src="./scripts/navActive.js" defer></script>
 
 </head>
 
@@ -16,22 +21,40 @@
   <h2>Insert Banner</h2>
 </header>
 
-    <nav class="mainNav">
+    <nav class="mainNav" id="mainNav" aria-label="Main navigation">
         <div class="offScreenMenu">
             <ul class="dropdownNavList">
                 <li><a href="./Pages/Products.html" class="navLink">Products</a></li>
-                <li><a href="./Pages/Forms.html" class="navLink">Login</a></li>
                 <li><a href="./Pages/FeaturedProducts.html" class="navLink">Featured</a></li>
+                <li><a href="./Pages/Cart.html" class="navLink">Cart</a></li>
+                <li><a href="./Pages/Forms.html" class="navLink">Login</a></li>
             </ul>
         </div>
     </nav>
 
     <nav class="SecondNav">
+        <button class="hamburgerBtn" id="hamburgerBtn" aria-label="Toggle Navigation"></button>
              <div class="hamburgerMenu">         <!--lines in the toggle menu -->
-                 <span></span>
-                <span></span>
-                <span></span>
-            </div>
+                <span class="bar topBar"></span>
+                <span class="bar middleBar"></span>
+                <span class="bar bottomBar"></span>
+    </button>
+
+    <!-- Dropdown for mobile: -->
+    <nav class="mobileDropdown" id="mobileDropdown">
+      <ul class="dropdownNavList">
+        <li><a href="index.html" class="navLink">Home</a></li>
+        <li><a href="./Pages/Products.html" class="navLink">Products  </a></li>
+        <li><a href="./Pages/FeaturedProducts.html" class="navLink">Featured </a></li>
+        <li><a href="./Pages/Cart.html" class="navLink"> Cart </a></li>
+        <li><a href="./Pages/Forms.html" class="navLink">Login </a></li>
+      </ul>
+    </nav>
+
+
+
+
+
     </nav>
 
     <h1> JustBeans!</h1>
