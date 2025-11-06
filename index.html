@@ -15,10 +15,9 @@
 
 
 <body>
-  <header class="Header">
-  <h2>Insert Banner</h2>
-</header>
+ 
 
+<header class="navContainer">
     <nav class="mainNav" id="mainNav" aria-label="Main navigation">
         <button class="hamMenu" id="hamMenu" aria-label="Toggle Menu">
                 <span class="bar topBar"></span>                        <!--lines in the toggle menu -->
@@ -26,8 +25,13 @@
                 <span class="bar bottomBar"></span>
         </button>
 
+ <div class="logoContainer">
+      <a href="index.html">
+        <img src="./Images/Logo.png" alt="JustBeans Coffee Logo">
+      </a>
+    </div>
 
-        <div class="offScreenMenu" id="offScreenMenu">
+ <div class="offScreenMenu" id="offScreenMenu">
             <ul class="dropdownNavList">
                 <li><a href="./index.html"class="navLink"></a>Home</li>
                 <li><a href="./Pages/Products.html" class="navLink">Products</a></li>
@@ -37,9 +41,25 @@
             </ul>
         </div>
     </nav>
+    </header>
 
-    </nav>
+        <section class="banner">
+            <video autoplay muted loop playsinline class="bannerVideo">
+             <source src="" >
+            </video>
 
+    <!-- Optional fallback image
+     <img src=" " alt="Barista at work" class="bannerImage"> -->
+</div>
+ <div class="bannerText">
+            <h1>Welcome to JustBeans</h1>
+            <p>Where every bean tells a story ☕</p>
+    <button class="shopNowBtn">Shop Now</button>
+</div>
+</section>
+       
+    
+<main>
     <h1> JustBeans!</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloremque harum, perspiciatis aperiam obcaecati ea
          esse minus excepturi repudiandae labore soluta, 
@@ -50,15 +70,15 @@
 
 </div>
 
-
+<!-- 
     <div class="container">
         <form id="form" action="/">
          <h1>Login</h1>
             <div class="inputControl">
                 <label for="username">Username</label> <br>
-                <input id="username" name="username" type="text">           <!-- We'll use this ID to grab the username(DOM element) from the javascript -->
-            <div class="error"></div>                                       <!-- Contains error messages specific to this field --> 
-            </div>
+                <input id="username" name="username" type="text">            We'll use this ID to grab the username(DOM element) from the javascript -->
+<!--       <div class="error"></div>                                       <!-- Contains error messages specific to this field --> 
+<!--  </div>
 
             <div class="inputControl">
                 <label for="email">Email</label><br>
@@ -68,13 +88,13 @@
             <div class="inputControl">
                 <label for="password">Password</label><br>
                 <input id="password" name="username" type="password">       <!--Password is a different type of variable that we will use later-->    
-            <div class="error"></div>                                   
+<!--      <div class="error"></div>                                   
             </div> <br>
 
             <button type="submit"> Sign Up</button>
 
         </form>
-    </div>
+    </div> -->
 
 <!--Product Cards-->
 <section class="products">
@@ -149,7 +169,7 @@
 
 
 </section>
-   
+</main>
 </body>
 </html>
 
