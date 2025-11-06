@@ -4,6 +4,13 @@
     align-items: center;
   }}
 
+  .logoContainer{
+    flex: left;
+    align-content: left;
+    width: 30px;
+    height: 30px;
+  }
+  
   .banner{
     position: relative;
     width: 100%;

@@ -6,30 +6,40 @@
     <meta name="author" content="Sisanda Gabela">
     <title>JustBeans-Homepage</title>
 
-<link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./style.css">
 
-<script src="./Scripts/hamMenu.js" defer></script>
-<script src="./scripts/navActive.js" defer></script>
-<script defer src="./Scripts/script.js"></script>
+        <script src="./Scripts/hamMenu.js" defer></script>
+        <script src="./scripts/navActive.js" defer></script>
+        <script defer src="./Scripts/script.js"></script>
 </head>
 
-
 <body>
- 
-
 <header class="navContainer">
-    <nav class="mainNav" id="mainNav" aria-label="Main navigation">
-        <button class="hamMenu" id="hamMenu" aria-label="Toggle Menu">
-                <span class="bar topBar"></span>                        <!--lines in the toggle menu -->
-                <span class="bar middleBar"></span>
-                <span class="bar bottomBar"></span>
-        </button>
-
+    
  <div class="logoContainer">
       <a href="index.html">
         <img src="./Images/Logo.png" alt="JustBeans Coffee Logo">
       </a>
     </div>
+    
+        <nav class="mainNav" id="mainNav" aria-label="Main navigation">
+        <ul class="navList">
+                <li><a href="./index.html"class="navLink active"></a>Home</li>
+                <li><a href="./Pages/Products.html" class="navLink">Products</a></li>
+                <li><a href="./Pages/FeaturedProducts.html" class="navLink">Featured</a></li>
+                <li><a href="./Pages/Cart.html" class="navLink">Cart</a></li>
+                <li><a href="./Pages/Forms.html" class="navLink">Login</a></li>
+            </ul>
+        </nav>
+</header>
+
+
+        <!-- <button class="hamMenu" id="hamMenu" aria-label="Toggle Menu">
+                <span class="bar topBar"></span>                        
+                <span class="bar middleBar"></span>
+                <span class="bar bottomBar"></span>
+        </button>
+
 
  <div class="offScreenMenu" id="offScreenMenu">
             <ul class="dropdownNavList">
@@ -41,36 +51,27 @@
             </ul>
         </div>
     </nav>
-    </header>
+    </header> -->
 
-        <section class="banner">
+    <section class="banner">
             <video autoplay muted loop playsinline class="bannerVideo">
              <source src="" >
             </video>
 
-    <!-- Optional fallback image
+    <!-- Backup image???
      <img src=" " alt="Barista at work" class="bannerImage"> -->
 </div>
- <div class="bannerText">
+    <div class="bannerText">
             <h1>Welcome to JustBeans</h1>
             <p>Where every bean tells a story ☕</p>
     <button class="shopNowBtn">Shop Now</button>
-</div>
+    </div>
 </section>
        
     
 <main>
-    <h1> JustBeans!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum doloremque harum, perspiciatis aperiam obcaecati ea
-         esse minus excepturi repudiandae labore soluta, 
-        aliquid dignissimos assumenda! Expedita sed asperiores delectus tenetur dignissimos!</p>
 
-    Many lovely thinks to come ;). 
-
-
-</div>
-
-<!-- 
+<!--  LOGIN/ FORM CODEEE
     <div class="container">
         <form id="form" action="/">
          <h1>Login</h1>
@@ -99,38 +100,31 @@
 <!--Product Cards-->
 <section class="products">
         <h2>Our Products</h2>
+
     <div class="productCard" id="productCard">
         <h3>Sunrise Blend</h3>
-             <p>                </p>
-
-    <div class="productInfo">
-        <p class="origin"  id="origin" >
+        <div class="productInfo" id="productInfo">
+            <p class="origin"  id="origin" >
                             Origin:              </p>
-
             <p class= "tastingNotes" id= "tastingNotes" >
                             Tasting notes:                     </p>
-
-      <p class="productPrice" id="productPrice" >
+            <p class="productPrice" id="productPrice" >
                             Price: R120</p>
-    </div>
+        </div>
          <p class="readMoreBtn">Read More</p>
     </div>
 
-        <div class="productCard" id="productCard">
-        <h3>Fog Valley Espresso</h3>
-              <p>                </p>
-
-        <div class="productInfo">
-      <p class="origin"  id="origin" >
+     <div class="productCard" id="productCard">
+        <h3>Fog Valley Bean</h3>
+        <div class="productInfo" id="productInfo">
+            <p class="origin"  id="origin" >
                             Origin:              </p>
-
-      <p class= "tastingNotes" id= "tastingNotes" >
+            <p class= "tastingNotes" id= "tastingNotes" >
                             Tasting notes:                     </p>
-
-      <p class="productPrice" id="productPrice" >
-                            Price: R120</p>
-    </div>
-        <p class="readMoreBtn">Read More</p>
+            <p class="productPrice" id="productPrice" >
+                            Price: R160</p>
+        </div>
+         <p class="readMoreBtn">Read More</p>
     </div>
 </section>
 
@@ -162,12 +156,6 @@
         class="galleryImg">
     
   </div>
-</div>
-
-
-
-
-
 </section>
 </main>
 </body>
