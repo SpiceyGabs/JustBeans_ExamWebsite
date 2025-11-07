@@ -13,6 +13,14 @@ body {
     color:#3c2e27;
 } 
 
+main {
+    font-family: 'Lato', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    padding-top: 75px;   /*space for nav*/ 
+    background-color: #0b2239;
+    color:#fcf7f5;
+} 
+
 /*NAVIGATION*/
 .navContainer {
   position: fixed;
@@ -77,7 +85,7 @@ body {
     width: 100%;
     height: 100vh; 
     overflow: hidden;
-    margin-top: 0; 
+    margin-top: -1; 
     color: #faf3e7;
   }
 
@@ -118,7 +126,7 @@ body {
   border-radius: 2px;
   font-weight: 600;
   transition: background 0.3s ease;
-  
+
 }
 
 .shopNowBtn:hover {
