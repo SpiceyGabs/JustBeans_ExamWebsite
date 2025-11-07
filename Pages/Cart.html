@@ -6,9 +6,13 @@
     <title>Cart</title>
 
      <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../cart.css">
+
     <script defer src="../Scripts/script.js"  ></script>
     <script defer src="../Scripts/hamMenu.js"  ></script>
-     <script src="../Scripts/navActive.js" defer></script>
+    <script src="../Scripts/navActive.js" defer></script>
+    <script defer src="../Scripts/cart.js" ></script>
+     
 </head>
 
 
@@ -31,8 +35,21 @@
         </nav>
 </header>
 
+    <section  class="cartSection" id="cart"> <h2 class="cartHeading">Your Cart</h2>
+         <div class="cartItems"></div>
+            <p class="cartTotal">Total: R
+            <span id="cartTotal">0.00</span>
+            
+            </p>
+    <button id="checkoutBtn">Checkout</button>
+
+</section>
 
 
-    <h1>CART</h1>
+
+
+
+
+
 </body>
 </html>

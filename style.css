@@ -82,6 +82,7 @@ body {
   object-fit: cover;
   display: block;
   filter: brightness(0.8);
+
 }
 
 .bannerText {
@@ -116,6 +117,53 @@ body {
 .shopNowBtn:hover {
   background-color: #14ff99;
 }
+
+/*ABOUT*/
+
+.aboutSection {
+ background-color: #faf3e7;
+ border-radius: 2px;
+ text-align: center;
+ overflow: hidden;
+ color: #052417;
+}
+
+
+.aboutContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutHeading {
+  font-size: 2.5rem;
+  /* font-weight: ; */
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.aboutParagraph {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*PRODUCTS*/

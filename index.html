@@ -11,6 +11,11 @@
         <script src="./Scripts/hamMenu.js" defer></script>
         <script src="./scripts/navActive.js" defer></script>
         <script defer src="./Scripts/script.js"></script>
+
+       <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+       <script src="./scripts/gsapAnimations.js"></script>
+</script>
+
 </head>
 
 <body>
@@ -88,7 +93,7 @@
             </div>
             <div class="inputControl">
                 <label for="password">Password</label><br>
-                <input id="password" name="username" type="password">       <!--Password is a different type of variable that we will use later-->    
+                <input id="password" name="username" type="password">       <Password is a different type of variable that we will use later-->    
 <!--      <div class="error"></div>                                   
             </div> <br>
 
@@ -96,6 +101,31 @@
 
         </form>
     </div> -->
+
+    <!-- ABOUT -->
+     <section id="about" class="aboutSection">
+        <div class="aboutContent">
+            <h2 class="aboutHeading">About Us</h2>
+        <p class="aboutSubtext">Established in 2002 · Proudly South African</p>
+
+        <p class="aboutParagraph">
+         Grounded in our love for authentic flavour,community, and convenience, we source our beans ethically 
+         from across the globe. From the lush, amazonian plantations of Brazil, to the picturesque
+        highlands of Kenya and the rich soils of Rwanda. 
+        </p>
+
+        <p class="aboutParagraph">
+        Each bean is carefully roasted and packaged right here in South Africa, 
+        ensuring every shipment and cup supports local hands and sustainable farming. 
+        </p>
+
+    <p class="aboutParagraph">
+      Our goal? To bring you closer to the craft. From farm to roast, to cup. 
+      We invite you to explore, taste, and trace the journey of your coffee 
+      through our interactive maps and honest, transparent process.
+    </p>
+  </div>
+</section>
 
 <!--Product Cards-->
 <section class="products">
@@ -155,6 +185,20 @@
         alt="A matcha mixing bowl, matcha powder and a baboo matcha whisk"          
         class="galleryImg">
     
+        <section class="mapsSection">
+        <div class="map" id="globalMap">
+            <h2> Just an Origin Story </h2>
+
+        </div>
+
+        <div class="map"  id="localMap">
+            <h2>Beans near You</h2>
+            <p>Our current distributors, find one near you!</p>
+
+         </div>
+        </section>
+
+
   </div>
 </section>
 </main>

@@ -1,0 +1,29 @@
+.cartSection {background-color: #f1f1f1;
+  outline: #90ee90;
+  padding: 80px;
+  text-align: center;
+  color: #3c2e27;
+}
+  
+.cartHeading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cartItems {
+  margin-bottom: 1rem;
+  min-height: 100px;
+}
+
+#checkoutBtn{
+    background-color: #13ef13;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+
+}
+
+#checkoutBtn:hover {
+background-color: #175e14;
+}
