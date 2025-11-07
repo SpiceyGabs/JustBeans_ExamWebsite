@@ -6,9 +6,12 @@
     <title>JustBeans Product Page </title>
 
     <link rel="stylesheet" href="../style.css">
+
     <script defer src="../Scripts/script.js"  ></script>
     <script defer src="../Scripts/hamMenu.js"  ></script>
-    <script defere src="../Scripts/navActive.js"></script>
+    <script defer src="../Scripts/navActive.js"></script>
+    <script src="../Scripts/cart.js"></script>
+    <script src="../Scripts/search.js"></script>
 </head>
 
 
@@ -31,14 +34,162 @@
             </ul>
         </nav>
 </header>
+
 <main>
+ <section  class="beanJourneySection" id="beanJourney">
+        <h2>Explore Our Signature Beans</h2>
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut atque a, quaerat reprehenderit molestiae nihil blanditiis sed! Provident, natus sequi molestias laborum repudiandae quis impedit facilis illo ut dolore explicabo!
+        <!-- a bean from every region -->
+         <!-- 1.BRAZIL -->
+ <article class="beanArticle" id="brazilianBlend">
+        <div class="beanImageContainer">
+          <img src=" " alt="Brazilian Coffee Bean" class="beanImage">
+        </div>
+
+             <aside class="beanInfo">
+          <h3>Brazilian Sunrise</h3>
+          <ul class="beanDetails">
+            <li class="location" id="brazil"> Region: Minas Gerais, Brazil</li>
+            <li> Net Weight:  135mg </li>
+            <li> Tasting Notes:Smooth, nutty and caramel undertones</li>
+            <li> Harvested from the lush Amazonian plantations and roasted in Cape Town, this blend delivers an irresistibly smooth finish, a true morning classic.</li>
+          </ul>
+        </aside>
+      </article>
+
+<article class="beanArticle" id="kenyanHeritage">
+        <div class="beanImageContainer">
+          <img src=" " alt="Kenyan Coffee Bean" class="beanImage">
+        </div>
+
+        <aside class="beanInfo">
+          <h3>Kenyan Heritage</h3>
+          <ul class="beanDetails">
+            <li class="location" id="kenya"> Region: Nyeri, Kenya</li>
+            <li> Net Weight:  120mg</li>
+            <li> Tasting Notes:Bold, citrusy, and wine-like acidity</li>
+            <li> Grown in the highlands of Kenya, this bean captures the vibrant rhythm of the region. It's bold, bright, and unapologetically full-bodied.</li>
+          </ul>
+        </aside>
+      </article>
+
+  <article class="beanArticle" id="rwandanGold">
+        <div class="beanImageContainer">
+          <img src=" " alt="Rwandan Coffee Bean" class="beanImage">
+        </div>
+
+        <aside class="beanInfo">
+          <h3>Rwandan Gold</h3>
+          <ul class="beanDetails">
+            <li class="location" id="rwanda"> Region: Lake Kivu, Rwanda</li>
+            <li> Net Weight:  111mg </li>
+            <li> Tasting Notes:Rich chocolate with hints of berry</li>
+            <li> From Rwanda’s volcanic soils comes this silky-smooth bean, that tells a story of resilience, growth, and golden flavour in every sip.</li>
+          </ul>
+        </aside>
+      </article>
+    </section>
 
 
+    <!-- PACKAGING -->
+<section class="packagingSection"  id="packagingOptions">
+    <h2>Our Packaging</h2>
+      <p>Eco-friendly, hydrophobic, paper packaging that preserves freshness, travels well and respects the planet.</p>
 
+      <!-- cards -->
+      <div class="packagingGrid">
+        <div class="packageCard">
+          <h3>350g Bag</h3>
+          <p>Perfect for a week’s worth of mornings. Compact, convenient, and sealed for freshness.</p>
+          <p class="packagePrice">R120.00</p>
+          <p class="packageSku">SKU: JB-350</p>
+          <p class="roastDate">Roast Date: 02 Oct 2025</p>
+           <button class="addToCartBtn" data-product="350g Bag" data-price="120">Add to Cart</button>            <!--kebab-case is for data attributes and js will turn it into camelcase anyways, thats why it wasnt working at first  -->
+        
+        </div>
+
+        <div class="packageCard">
+          <h3>800g Bag</h3>
+          <p>Our best-seller. A generous portion that balances volume and freshness.</p>
+          <p class="packagePrice">R250.00</p>
+          <p class="packageSku">SKU: JB-800</p>
+          <p class="roastDate">Roast Date: 02 Oct 2025</p>
+         <button class="addToCartBtn" data-product="800g Bag" data-price="250">Add to Cart</button>
+        
+        </div>
+
+        <div class="packageCard">
+          <h3>2kg Bag</h3>
+          <p>For coffee lovers and businesses. Pure, eco-conscious quality in every scoop.</p>
+          <p class="packagePrice">R580.00</p>
+          <p class="packageSku">SKU: JB-2KG</p>
+          <p class="roastDate">Roast Date: 02 Oct 2025</p>
+         <button class="addToCartBtn" data-product="2kg Bag" data-price="580">Add to Cart</button>
+        
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Commonly bought together/Related products-->
+       <section  class="relatedSection" id="relatedProducts">
+      <h2>Frequently bought with:</h2>
+
+      <div class="relatedGrid">
+        <div class="relatedCard">
+          <img src="../Images/espressoMacine.avif" alt="Espresso Machine">
+          <p>Espresso Machine</p>
+          <p class="productPrice">R3500.00</p>
+           <button class="addToCartBtn" data-product="Espresso Machine" data-price="0">Add to Cart</button>
+
+        </div>
+
+        <div class="relatedCard">
+          <img src="" alt="Filter Paper">
+          <p>Filter Paper Pack</p>
+           <p class="productPrice">R200.00</p>
+         <button class="addToCartBtn" data-product="Filter Paper" data-price="0">Add to Cart</button>
+          
+        </div>
+
+        <div class="relatedCard">
+          <img src="" alt="Coffee Grinder">
+          <p>Hand Grinder</p>
+           <p class="productPrice">R460.00</p>
+               <button class="addToCartBtn" data-product="Coffee Grinder" data-price="0">Add to Cart</button>
+          
+        </div>
+
+        <div class="relatedCard">
+          <img src=" " alt="Storage Jar">
+          <p>Coffee Storage Jars</p>
+           <p class="productPrice">R180.00</p>
+         <button class="addToCartBtn" data-product="Storage Jar" data-price="0">Add to Cart</button>
+          
+      </div>
+    </section>
 </main>
-   
+
+     <!-- Footer -->
+  <footer class="siteFooter">
+    <div class="footerGrid">
+      <div class="footerLeft">
+        <img src="../Images/Logo.png" alt="JustBeans Logo" class="footerLogo">
+        <p>© 2025 JustBeans Coffee Co™</p>
+        <p class="footerSlogan"> Every bean has a story</p>
+      </div>
+
+      <div class="footerRight">
+        <ul class="footerSocials">
+          <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
 
 
 
