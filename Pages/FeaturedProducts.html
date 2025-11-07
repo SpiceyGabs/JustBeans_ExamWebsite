@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Featured Products</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Other Styling/featured.css">
+
+
     <script defer src="../Scripts/script.js"  ></script>
     <script defer src="../Scripts/hamMenu.js"  ></script>
     <script defer src="../Scripts/navActive.js"></script>
@@ -12,10 +15,9 @@
     <script src="../Scripts/search.js"></script>
    
 
-
 </head>
 
-<body ">
+<body >
    <header class="navContainer">
     
  <div class="logoContainer">
@@ -35,13 +37,150 @@
         </nav>
 </header>
 
-<main>
+<main class="featuredProductsPage">
+   <section class="featuredIntro">
     <h1>Featured Products</h1>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia natus nihil officiis atque voluptate, qui iure, quibusdam molestias cupiditate deleniti animi, asperiores optio exercitationem laudantium. Corporis facilis aut quae aperiam.
+    <p>
+      Discover premium brewing tools and accessories that bring out the best in every cup. 
+      From espresso machines to eco-friendly packaging, our featured collection is designed 
+      for coffee lovers who value craft, sustainability, and everyday luxury.
+    </p>
+  </section>
 
+  <!-- Gallery -->
+  <section class="featuredProducts">
+    <h2>Our Favorites This Season</h2>
+    <div class="galleryGrid">
+      
+      <!-- Cards-->
+      <article class="productCard">
+        <img src="../Images/espressoMacine.avif" alt="Espresso Machine on a countertop" class="galleryImg">
+        <div class="productInfo">
+          <h3>Espresso Machine</h3>
+          <p>Engineered for precision and consistency. Perfect for home baristas and cafes alike.</p>
+          <aside>
+            <h4>Directions for Use</h4>
+            <ul>
+              <li>Fill the portafilter with your favorite beans.</li>
+              <li>Tamp evenly and lock in place.</li>
+              <li>Steam, pour, and enjoy smooth espresso every time.</li>
+            </ul>
+          </aside>
+          <div class="productMeta">
+            <p>SKU: 001A</p>
+            <p>Price: R3,500.00</p>
+            <button class="addToCartBtn" data-product="Espresso Machine" data-price="3499">Add to Cart</button>
+          </div>
+        </div>
+      </article>
 
+      <article class="productCard">
+        <img src="../Images/packaging.avif" alt="A variety of packaging items including a coffee mug and wooden utensil" class="galleryImg">
+        <div class="productInfo">
+          <h3>Eco Packaging Set</h3>
+          <p>Made from hydrophobic paper — strong, reusable, and eco-conscious. Keeps your beans fresh while reducing waste.</p>
+          <aside>
+            <h4>Did You Know?</h4>
+            <p>Our packaging is biodegradable and water-resistant, keeping your beans safe from moisture and sunlight.</p>
+          </aside>
+          <div class="productMeta">
+            <p>SKU: 002B</p>
+            <p>Price: R356.00</p>
+            <button class="addToCartBtn" data-product="Eco Packaging Set" data-price="199">Add to Cart</button>
+          </div>
+        </div>
+      </article>
 
+      <article class="productCard">
+        <img src="../Images/coffee grinder.avif" alt="Coffee grinder" class="galleryImg">
+        <div class="productInfo">
+          <h3>Manual Coffee Grinder</h3>
+          <p>Adjustable ceramic burrs for consistent grind size. Designed for travel and small spaces.</p>
+          <aside>
+            <h4>Product Pairings</h4>
+            <ul>
+              <li>Pairs perfectly with our Rwandan Medium Roast.</li>
+              <li>Ideal for French press or pour-over brewing.</li>
+            </ul>
+          </aside>
+          <div class="productMeta">
+            <p>SKU: 003C</p>
+            <p>Price: R849.00</p>
+            <button class="addToCartBtn" data-product="Manual Coffee Grinder" data-price="849">Add to Cart</button>
+          </div>
+        </div>
+      </article>
 
+      <article class="productCard">
+        <img src="../Images/pitcher.avif" alt="A coffee pitcher" class="galleryImg">
+        <div class="productInfo">
+          <h3>Stainless Steel Pitcher</h3>
+          <p>Sleek, durable, and balanced for perfect milk frothing. A must-have for any espresso setup.</p>
+          <aside>
+            <h4>Did You Know?</h4>
+            <p>The narrow spout helps create latte art with smoother microfoam texture. It's a craft that takes time to master. </p>
+          </aside>
+          <div class="productMeta">
+            <p>SKU: 004D</p>
+            <p>Price: R499.00</p>
+            <button class="addToCartBtn" data-product="Stainless Steel Pitcher" data-price="499">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="productCard">
+        <img src="../Images/tamper.jpeg" alt="A coffee tamper" class="galleryImg">
+        <div class="productInfo">
+          <h3>Precision Coffee Tamper</h3>
+          <p>Balanced stainless-steel design ensures even compression for a perfect shot.</p>
+          <aside>
+            <h4>Product Pairings</h4>
+            <ul>
+              <li>Espresso Machine</li>
+              <li>Rwandan Dark Roast Beans</li>
+            </ul>
+          </aside>
+          <div class="productMeta">
+            <p>SKU: 005E</p>
+            <p>Price: R329.00</p>
+            <button class="addToCartBtn" data-product="Precision Coffee Tamper" data-price="329">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="productCard">
+        <img src="../Images/matcha.avif" alt="A matcha mixing bowl, matcha powder and a bamboo whisk" class="galleryImg">
+        <div class="productInfo">
+          <h3>Matcha Essentials Kit</h3>
+          <p>Complete set with bamboo whisk, scoop, and ceremonial bowl for mindful brewing.</p>
+          <aside>
+            <h4>Coming Soon</h4>
+            <p>Matcha mugs, trays, and premium blends will be added soon!Stay tuned for our wellness range.</p>
+          </aside>
+          <div class="productMeta">
+            <p>SKU: 006F</p>
+            <p>Price: R649.00</p>
+            <button class="addToCartBtn" data-product="Matcha Essentials Kit" data-price="649">Add to Cart</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Merch -->
+  <section class="merchSection">
+    <h2>Merch Coming Soon</h2>
+    <p>Get ready for our exclusive JustBeans apparel and barista gear. Locally produced, stylish, sustainable, and grounded in the culture.
+    </p>
+  </section>
+
+  <section class="mapsSection">
+    <div class="map" id="localMap">
+      <h2>Beans Near You</h2>
+      <p>Our current distributors — find one near you!</p>
+    </div>
+  </section>
 
 </main>
 </body>

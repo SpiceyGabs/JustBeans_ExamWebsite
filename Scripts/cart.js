@@ -13,7 +13,7 @@ addButtons.forEach((btn) => {
     const productPrice = parseFloat(btn.dataset.price);
  addToCart(productName, productPrice);
     });
-    } 
+    }};
 
      // Add to cart logic
 function addToCart(productName, price) {
