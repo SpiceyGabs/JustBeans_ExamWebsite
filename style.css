@@ -66,6 +66,11 @@ body {
 }
 
 
+
+
+
+
+
 /* BANNER*/
 .banner{
     position: relative;
@@ -118,20 +123,36 @@ body {
   background-color: #14ff99;
 }
 
+
+
+
+
+
+
+
+
 /*ABOUT*/
 
-.aboutSection {
+.aboutSection, .aboutContent {
  background-color: #faf3e7;
  border-radius: 2px;
  text-align: center;
  overflow: hidden;
- color: #052417;
+ color: #072f1e;
+ margin: 10px 0 ;
+ padding-bottom: 2px;
 }
 
+
+.aboutSubtext{
+    padding-bottom: 4px;
+    font-style: italic;
+}
 
 .aboutContent {
   max-width: 800px;
   margin: 0 auto;
+  color: #3c2e27;
 }
 
 .aboutHeading {
@@ -139,13 +160,15 @@ body {
   /* font-weight: ; */
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  color: #3c2e27;
 }
 
-.aboutParagraph {
+.aboutsection p {
   font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   opacity: 0;
+  color: #3c2e27;
   transform: translateY(50px);
 }
 
@@ -153,6 +176,25 @@ body {
 
 
 
+/*MAPS*/
+.mapsSection {
+    margin-bottom: 10px;
+    background-color: #7e9ebe;
+    transform: ease(0.3s, 20%);
+    padding-left: 2px;
+    text-align: center;
+    color: #f1f1f1;
+
+}
+
+.map {
+  width: 100%;
+  height: 400px;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px #0b2239
+
+}
 
 
 
@@ -218,7 +260,7 @@ body {
   background-color: #0f2027; /* dark bg example */
   color: #f1f1f1;
   font-family: sans-serif;
-  border-bottom: solid #e9dcc5;
+  border-top: solid #e9dcc5;
 }
 
 
@@ -259,6 +301,19 @@ body {
 .galleryImg:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RESPONSIVE DESIGN */
