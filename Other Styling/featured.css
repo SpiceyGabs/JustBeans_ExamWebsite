@@ -1,3 +1,10 @@
+.featuredIntro{
+    padding-bottom: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+
 .productCard h3{
     color: #3c2e27;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -55,3 +62,4 @@
     height: 240px;
   }
 }
+

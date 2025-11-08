@@ -65,7 +65,7 @@ display: grid;
 
 
 /* Base grid container */
-.packagingGrid, .beanJourneySection, .relatedGrid, .galleryGrid {
+.packagingGrid, .beanJourneySection, .relatedGrid, .galleryGrid, .packedSection {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
   gap: 2rem; 
