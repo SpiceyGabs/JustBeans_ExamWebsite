@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Selects all nav links inside both topNav and sideNav
-  const navLinks = document.querySelectorAll('.topNav, .sideNav .navLink');
+  const navLinks = document.querySelectorAll('.topNav .navLink, .sideNav .navLink');
 
   // Get the current page file name (so "Products.html")
   const currentPage = window.location.pathname.split('/').pop();
