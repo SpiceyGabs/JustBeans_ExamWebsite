@@ -8,7 +8,7 @@
 }
 
 .iconLink {
-  color: #fff; 
+  color: #f1f1f1; 
   font-size: 20px;
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -85,6 +85,12 @@
 .navLink.active {
   color: #d4a373;
   font-weight: bold;
+}
+
+.navLink{
+    color: #f1f1f1;
+    text-decoration: none;
+    opacity: 100%;
 }
 
 
