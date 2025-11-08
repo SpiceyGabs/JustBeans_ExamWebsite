@@ -1,5 +1,4 @@
-// gsapAnimations.js
-// safe init for GSAP + ScrollTrigger
+gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
 
 (function() {
   // wait until window load to be certain images/layout are present
@@ -48,4 +47,42 @@
 })();
 
 //Solution from assistive tool:This waits for load (images done) and prints console errors if gsap/ScrollTrigger are missing.
-//Open browser DevTools → Console to see the debug logs. If counts are 0 that means class names don't match your HTML.
+//Open browser DevTools and go to Console to see the debug logs. If counts are 0 that means class names don't match my HTML.
+
+//SCROLLTRIGGER RAAHHHH
+gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
+
+// Get elements
+const track = document.querySelector(".carouselTrack");
+const slides = gsap.utils.toArray(".productCard");
+// const prevBtn = document.querySelector(".prev");
+// const nextBtn = document.querySelector(".next");
+
+function getSlideWidth() {
+  return slides[0].offsetWidth + 20;
+}
+
+function initInfiniteCarousel() {
+  const totalWidth = getSlideWidth() * slides.length;
+
+  // Position slides horizontally
+  gsap.set(slides, {
+    x: (i) => i * getSlideWidth()
+  });
+
+  // Infinite loop animation
+  gsap.to(slides, {
+    x: "+=" + getSlideWidth(),             // Moves right, for left change x: "-=" 
+    duration: 3,                           // Speed
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize((x) => {
+        return (parseFloat(x) % totalWidth);
+      })
+    }
+  });
+}
+
+// init?? after images load:
+window.addEventListener("load", initInfiniteCarousel);
