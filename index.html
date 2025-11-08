@@ -18,11 +18,16 @@
         <script defer src="./Scripts/script.js"></script>
         <script defer src="./Scripts/maps.js"></script>
 
+        <!-- GSAP -->
        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
        <script src="./scripts/gsapAnimations.js"></script>
 </script>
 
-</head>
+        <!-- API -->
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    </head>
 
 <body>
     <!--Top Navigation Bar-->
@@ -74,8 +79,8 @@
   <ul>
     <li><a href="./Pages/Products.html"  class="navLink" ><i class="fi fi-rr-angle-circle-right"></i> Products</a></li>
     <li><a href="./Pages/FeaturedProducts.html"  class="navLink" ><i class="fi fi-rr-angle-circle-right"></i> Featured</a></li>
-    <li><a href="./Pages/About.html" class="navLink"  ><i class="fi fi-rr-angle-circle-right"></i> About</a></li>
-    <li><a href="./Pages/Contact.html"  class="navLink" ><i class="fi fi-rr-angle-circle-right"></i> Contact</a></li>
+    <!-- <li><a href="./Pages/About.html" class="navLink"  ><i class="fi fi-rr-angle-circle-right"></i> About</a></li>
+    <li><a href="./Pages/Contact.html"  class="navLink" ><i class="fi fi-rr-angle-circle-right"></i> Contact</a></li> -->
   </ul>
 </nav>
 <main>
@@ -87,7 +92,7 @@
             <div class="inputControl">
                 <label for="username">Username</label> <br>
                 <input id="username" name="username" type="text">            We'll use this ID to grab the username(DOM element) from the javascript -->
-<!--       <div class="error"></div>                                       <!-- Contains error messages specific to this field --> 
+<!--       <div class="error"></div>                                       < Contains error messages specific to this field --> 
 <!--  </div>
 
             <div class="inputControl">
@@ -135,15 +140,15 @@
          <div class="meetTheTeam">
 
           <h2>Meet the Team!</h2>
-         <img src="./Images/theTeam.jpeg" alt="an asian women on the left, a white man in the middle and a black woman on the right all wearing barista aprons" class="aboutImg">
-          <p>
+         <img src="./Images/theTeam.jpeg" alt="Team photo" class="aboutImg teamImg">
+
             JustBeans began with three South African university students; a diverse team of language and economics graduates from UCT 
             who found themselves unemployed in 2001. Armed with a shared passion for coffee, 
             culture, and community, they started selling freshly brewed coffee 
             out of a small rented truck at campus events and on campus during the exam season.
           </p>
 
-          <img src="./Images/coffee trucks - Google Search.jpeg" alt="a coffee truck outside of a building beside a street and parking lot" class="aboutImg" >
+         <img src="./Images/coffee trucks - Google Search.jpeg" alt="Coffee truck" class="aboutImg cartImg">
           <p>
             What started as a side hustle has since evolved into a proudly local brand that blends heritage and innovation. Today, the team continues 
             to break into both local and digital markets, delivering the same quality and convenience that fueled their humble beginnings.
