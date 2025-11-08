@@ -12,14 +12,22 @@
   display: flex;
   gap: 18px;
   z-index: 1000;
-  background: rgba(0,0,0,0.35);
   padding: 10px 18px;
   border-radius: 10px;
 }
 
+.logoContainer{
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  image-resolution: 1080px;
+  
+}
+
 .iconLink {
   color: #f1f1f1; 
-  font-size: 20px;
+  font-size: 35px;
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
