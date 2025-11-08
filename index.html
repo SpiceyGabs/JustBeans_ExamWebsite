@@ -7,9 +7,11 @@
     <title>JustBeans-Homepage</title>
 
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./Other Styling/nav.css">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
 
-        <script src="./Scripts/hamMenu.js" defer></script>
-        <script src="./scripts/navActive.js" defer></script>
+        <script src="./Scripts/hamMenu.js" ></script>
+        <script src="./scripts/navActive.js"></script> 
         <script defer src="./Scripts/script.js"></script>
         <script defer src="./Scripts/maps.js"></script>
 
@@ -20,25 +22,15 @@
 </head>
 
 <body>
+    <!--Top Navigation Bar-->
 <header class="navContainer">
-    
- <div class="logoContainer">
-      <a href="index.html">
-        <img src="./Images/Logo.png" alt="JustBeans Coffee Logo">
-      </a>
-    </div>
-    
-        <nav class="mainNav" id="mainNav" aria-label="Main navigation">
-        <ul class="navList">
-                <li><a href="./index.html"class="navLink active">Home</a></li>
-                <li><a href="./Pages/Products.html" class="navLink">Products</a></li>
-                <li><a href="./Pages/FeaturedProducts.html" class="navLink">Featured</a></li>
-                <li><a href="./Pages/Cart.html" class="navLink">Cart</a></li>
-                <li><a href="./Pages/Forms.html" class="navLink">Login</a></li>
-            </ul>
-        </nav>
+  <div class="topNav">
+    <a href="index.html" class="iconLink"><i class="fi fi-bs-home"></i></a>
+    <a href="./Pages/Search.html" class="iconLink"><i class="fi fi-rr-search"></i></a>
+    <a href="./Pages/Forms.html" class="iconLink"><i class="fi fi-rr-user"></i></a>
+    <a href="./Pages/Cart.html" class="iconLink"><i class="fi fi-rr-shopping-cart"></i></a>
+  </div>
 </header>
-
 
         <!-- <button class="hamMenu" id="hamMenu" aria-label="Toggle Menu">
                 <span class="bar topBar"></span>                        
@@ -61,7 +53,7 @@
 
     <section class="banner">
             <video autoplay muted loop playsinline class="bannerVideo">
-             <source src="./Images/JustBeans Edited Banner.mp4" loop >
+             <source src="./Images/JustBeans Edited Banner.mp4" loop type="video/mp4" >
             </video>
 
     <!-- Backup image???
@@ -72,8 +64,17 @@
             <p>Where every bean tells a story </p>
     <a href="./Pages/Products.html" target="_blank" class="shopNowBtn">Shop Now</a>
 </section>
+
        
-    
+<!-- Side Nav!!! -->
+    <nav class="sideNav">
+  <ul>
+    <li><a href="./Pages/Products.html"><i class="fi fi-rr-angle-circle-right"></i> Products</a></li>
+    <li><a href="./Pages/FeaturedProducts.html"><i class="fi fi-rr-angle-circle-right"></i> Featured</a></li>
+    <li><a href="./Pages/About.html"><i class="fi fi-rr-angle-circle-right"></i> About</a></li>
+    <li><a href="./Pages/Contact.html"><i class="fi fi-rr-angle-circle-right"></i> Contact</a></li>
+  </ul>
+</nav>
 <main>
 
 <!--  LOGIN/ FORM CODEEE
