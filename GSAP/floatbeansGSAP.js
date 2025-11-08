@@ -1,7 +1,7 @@
 gsap.registerPlugin(MotionPathPlugin);
 
 document.addEventListener("DOMContentLoaded", () => {
-  const beans = document.querySelectorAll(".floatBean", ".beanImage");
+  const beans = document.querySelectorAll(".floatBean");
 
   beans.forEach((bean, i) => {
     // each bean’s path and speed below
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
           { x: 200 * (i % 2 === 0 ? 1 : -1), y: 30 },
           { x: 0, y: 0 }
         ],
-        curviness: 1.2
+        curviness: 3
       }
     });
   });
