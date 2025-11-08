@@ -221,7 +221,7 @@ main {
   padding: 3rem 2rem;
   background-color: #f1f1f1;
   border-radius: 0.9rem;
-  text-align: left;
+  text-align: center;
   color: #0f2027;
   width: 250rem;
   height: 200rem;
@@ -318,13 +318,13 @@ main {
   transform: scale(1.05);
 }
 
-.carouselViewport {
+/* .carouselViewport {
   overflow: hidden;
   width: 100%;
 }
 
 /* when script creates viewport it will use these classes */
-.carouselViewport {
+/*.carouselViewport {
   overflow: hidden;
   width: 100%;
 }
@@ -349,7 +349,7 @@ main {
   height: auto;
   border-radius: 10px;
   display: block;
-}
+} 
 
 
 

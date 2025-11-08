@@ -97,134 +97,134 @@ gsap.registerPlugin(ScrollTrigger, ModifiersPlugin);
 //SCROLLTRIGGER RAAHHHH
 // Continuous infinite product-card carousel (wraps existing markup)
 // Requires: gsap, ScrollTrigger (optional), ModifiersPlugin
-(function() {
-  // safety guard
-  if (typeof gsap === "undefined") {
-    console.error("gsap missing");
-    return;
-  }
-  if (typeof ModifiersPlugin === "undefined") {
-    console.error("ModifiersPlugin missing — include ModifiersPlugin.min.js before this file.");
-    return;
-  }
+// (function() {
+//   // safety guard
+//   if (typeof gsap === "undefined") {
+//     console.error("gsap missing");
+//     return;
+//   }
+//   if (typeof ModifiersPlugin === "undefined") {
+//     console.error("ModifiersPlugin missing — include ModifiersPlugin.min.js before this file.");
+//     return;
+//   }
 
-  gsap.registerPlugin(ModifiersPlugin, ScrollTrigger);
+//   gsap.registerPlugin(ModifiersPlugin, ScrollTrigger);
 
-  // Config
-  const GAP = 20; // px gap between slides (match your CSS)
-  let anim;
+//   // Config
+//   const GAP = 20; // px gap between slides (match your CSS)
+//   let anim;
 
-  function buildCarousel() {
-    // find container that currently holds .productCard elements
-    const productsSection = document.querySelector(".productsSection");
-    if (!productsSection) {
-      console.error(".productsSection not found");
-      return;
-    }
+//   function buildCarousel() {
+//     // find container that currently holds .productCard elements
+//     const productsSection = document.querySelector(".productsSection");
+//     if (!productsSection) {
+//       console.error(".productsSection not found");
+//       return;
+//     }
 
-    // get all productCard children
-    const cards = Array.from(productsSection.querySelectorAll(".productCard"));
-    if (!cards.length) {
-      console.error("No .productCard elements found inside .productsSection");
-      return;
-    }
+//     // get all productCard children
+//     const cards = Array.from(productsSection.querySelectorAll(".productCard"));
+//     if (!cards.length) {
+//       console.error("No .productCard elements found inside .productsSection");
+//       return;
+//     }
 
-    // create viewport + track and move cards into track
-    let viewport = productsSection.querySelector(".carouselViewport");
-    if (!viewport) {
-      viewport = document.createElement("div");
-      viewport.className = "carouselViewport";
-      // move the cards' parent children into viewport
-      // create a track
-      const track = document.createElement("div");
-      track.className = "carouselTrack";
+//     // create viewport + track and move cards into track
+//     let viewport = productsSection.querySelector(".carouselViewport");
+//     if (!viewport) {
+//       viewport = document.createElement("div");
+//       viewport.className = "carouselViewport";
+//       // move the cards' parent children into viewport
+//       // create a track
+//       const track = document.createElement("div");
+//       track.className = "carouselTrack";
 
-      // move only the productCard nodes into the track
-      cards.forEach(card => {
-        track.appendChild(card);
-      });
+//       // move only the productCard nodes into the track
+//       cards.forEach(card => {
+//         track.appendChild(card);
+//       });
 
-      // append track into viewport, and viewport into productsSection
-      viewport.appendChild(track);
-      // if productsSection had other text (like .productText), keep it: insert viewport after .productText
-      const productText = productsSection.querySelector(".productText");
-      if (productText) {
-        productText.insertAdjacentElement("afterend", viewport);
-      } else {
-        productsSection.appendChild(viewport);
-      }
-    }
+//       // append track into viewport, and viewport into productsSection
+//       viewport.appendChild(track);
+//       // if productsSection had other text (like .productText), keep it: insert viewport after .productText
+//       const productText = productsSection.querySelector(".productText");
+//       if (productText) {
+//         productText.insertAdjacentElement("afterend", viewport);
+//       } else {
+//         productsSection.appendChild(viewport);
+//       }
+//     }
 
-    const track = viewport.querySelector(".carouselTrack");
-    const slides = gsap.utils.toArray(track.querySelectorAll(".productCard"));
+//     const track = viewport.querySelector(".carouselTrack");
+//     const slides = gsap.utils.toArray(track.querySelectorAll(".productCard"));
 
-    // ensure track and slides exist
-    if (!track || slides.length === 0) {
-      console.error("carouselTrack or slides missing");
-      return;
-    }
+//     // ensure track and slides exist
+//     if (!track || slides.length === 0) {
+//       console.error("carouselTrack or slides missing");
+//       return;
+//     }
 
-    // helper to compute slide width (+ gap)
-    function getSlideWidth() {
-      const rect = slides[0].getBoundingClientRect();
-      return Math.round(rect.width + GAP);
-    }
+//     // helper to compute slide width (+ gap)
+//     function getSlideWidth() {
+//       const rect = slides[0].getBoundingClientRect();
+//       return Math.round(rect.width + GAP);
+//     }
 
-    // set initial positions (x)
-    function positionSlides() {
-      const slideW = getSlideWidth();
-      gsap.set(slides, {
-        x: (i) => i * slideW
-      });
-      return slideW;
-    }
+//     // set initial positions (x)
+//     function positionSlides() {
+//       const slideW = getSlideWidth();
+//       gsap.set(slides, {
+//         x: (i) => i * slideW
+//       });
+//       return slideW;
+//     }
 
     // init/refresh infinite animation
-    function initAnimation() {
-      const slideW = positionSlides();
-      const totalWidth = slideW * slides.length;
+//     function initAnimation() {
+//       const slideW = positionSlides();
+//       const totalWidth = slideW * slides.length;
 
-      // kill previous anim if exists
-      if (anim) anim.kill();
+//       // kill previous anim if exists
+//       if (anim) anim.kill();
 
-      anim = gsap.to(slides, {
-        x: "+=" + slideW,      // direction and chunk to move each tick
-        duration: 3,           // lower = faster
-        ease: "none",
-        repeat: -1,
-        modifiers: {
-          x: function(x) {
-            // x is a string like "123.45px" or "-10px"
-            const n = parseFloat(x);
-            // positive mod in range [0, totalWidth)
-            const mod = ((n % totalWidth) + totalWidth) % totalWidth;
-            return mod + "px";
-          }
-        }
-      });
-    }
+//       anim = gsap.to(slides, {
+//         x: "+=" + slideW,      // direction and chunk to move each tick
+//         duration: 3,           // lower = faster
+//         ease: "none",
+//         repeat: -1,
+//         modifiers: {
+//           x: function(x) {
+//             // x is a string like "123.45px" or "-10px"
+//             const n = parseFloat(x);
+//             // positive mod in range [0, totalWidth)
+//             const mod = ((n % totalWidth) + totalWidth) % totalWidth;
+//             return mod + "px";
+//           }
+//         }
+//       });
+//     }
 
-    // pause/resume on hover
-    viewport.addEventListener("mouseenter", () => anim && anim.pause());
-    viewport.addEventListener("mouseleave", () => anim && anim.resume());
+//     // pause/resume on hover
+//     viewport.addEventListener("mouseenter", () => anim && anim.pause());
+//     viewport.addEventListener("mouseleave", () => anim && anim.resume());
 
-    // responsive: recompute on resize (debounced)
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        initAnimation();
-      }, 150);
-    });
+//     // responsive: recompute on resize (debounced)
+//     let resizeTimer;
+//     window.addEventListener("resize", () => {
+//       clearTimeout(resizeTimer);
+//       resizeTimer = setTimeout(() => {
+//         initAnimation();
+//       }, 150);
+//     });
 
-    // start
-    initAnimation();
-  }
+//     // start
+//     initAnimation();
+//   }
 
-  // Wait until window load so images have size
-  if (document.readyState === "complete") {
-    buildCarousel();
-  } else {
-    window.addEventListener("load", buildCarousel);
-  }
-})();
+//   // Wait until window load so images have size
+//   if (document.readyState === "complete") {
+//     buildCarousel();
+//   } else {
+//     window.addEventListener("load", buildCarousel);
+//   }
+// })();
