@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
 const cart = [];
 const cartContainer = document.querySelector(".cartItems");
 const totalEl = document.getElementById("cartTotal");

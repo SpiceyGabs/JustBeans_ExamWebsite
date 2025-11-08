@@ -39,6 +39,11 @@
 .beanJourneySection {
   position: relative;
   z-index: 1;  /*-1, or negative values??*/
+display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: start;
+
 }
 .floatingBeans {
   z-index: 0;
@@ -57,3 +62,113 @@
     position: center;
 }
 
+
+
+/* Base grid container */
+.packagingGrid, .beanJourneySection, .relatedGrid, .galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 2rem; 
+  justify-items: center;
+  align-items: start;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Card items */
+.packageCard,.relatedCard,.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #faf3e7;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 12px #2d4a63;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.packageCard{
+    width:250px;
+    height: 300px;
+
+}
+
+.packageCard:hover,.relatedCard:hover,.productCard:hover {
+  transform: translateY(-6px);
+}
+
+
+.packagingImage,.relatedCard img,.galleryImg,.productCard img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.packageCard h3, .relatedCard p, .productCard h3 {
+  margin: 0.75rem 0 0.25rem;
+  color: #0b2239;
+}
+
+.packagingSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    align-items: start;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+
+
+
+
+
+
+
+/* Buttons */
+.addToCartBtn {
+  background: #0b2239;
+  color: #faf3e7;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.addToCartBtn:hover {
+  background: #90ee90;
+  color: #0b2239;
+}
+
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .packagingGrid,.relatedGrid,.galleryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .packagingGrid,.relatedGrid,.galleryGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .packagingImage,.relatedCard img, .galleryImg {
+    height: 240px;
+  }
+}
