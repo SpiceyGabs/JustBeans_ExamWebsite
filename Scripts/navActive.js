@@ -13,11 +13,32 @@
 //   });
 // });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sideNav = document.querySelector(".sideNav");
+  const bannerVideo = document.querySelector(".bannerVideo");
+
+  if (!sideNav || !bannerVideo) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        sideNav.classList.add("visible");
+      } else {
+        sideNav.classList.remove("visible");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(bannerVideo);
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Select all nav links inside both topNav and sideNav
+  // Selects all nav links inside both topNav and sideNav
   const navLinks = document.querySelectorAll('.topNav, .sideNav .navLink');
 
-  // Get the current page file name (e.g. "Products.html")
+  // Get the current page file name (so "Products.html")
   const currentPage = window.location.pathname.split('/').pop();
 
   navLinks.forEach(link => {

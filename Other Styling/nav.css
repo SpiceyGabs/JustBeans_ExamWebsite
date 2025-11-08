@@ -1,14 +1,14 @@
 .topNav {
   position: fixed;
   top: 15px;
-  left: 20px;
+  right: 20px;
   display: flex;
   gap: 18px;
   z-index: 1000;
 }
 
 .iconLink {
-  color: #fff; /* ✅ White icons */
+  color: #fff; 
   font-size: 20px;
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -19,25 +19,28 @@
   color: #c9a97e; /* coffee gold hover accent */
 }
 
-/* ===== Side Nav ===== */
+/* Side Nav  */
 .sideNav {
   position: fixed;
   top: 50%;
   left: 0;
-  background-color: #6b4f2d; /* lighter coffee brown */
+  background-color: #6b4f2d; 
   padding: 20px 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   z-index: 900;
   opacity: 0;
-  transform: translateX(-30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(-50%) translateX(-30px);
   pointer-events: none;
+  padding: 20px 10px;
+
+
 }
 
 .sideNav.visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0);
   pointer-events: auto;
 }
 
@@ -52,12 +55,12 @@
 }
 
 .sideNav a {
-  color: #fff;
+  color: #f1f1f1;
   text-decoration: none;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 8px; /* space between icon and text */
+  gap: 8px; 
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -68,15 +71,24 @@
 
 .sideNav i {
   font-size: 14px;
-  color: #fff; 
+  color: #f1f1f1; 
 }
 
-topNav .navLink.active i,
+.topNav .navLink.active i,
 .sideNav .navLink.active i {
   color: #d4a373; 
+  font-size: 22px;
+  transition: color 0.3s ease, transform 0.3s ease;
+
 }
 
 .navLink.active {
   color: #d4a373;
   font-weight: bold;
+}
+
+
+.topNav .navLink:hover i {
+  color: #403220; 
+  transform: scale(1.1);
 }
