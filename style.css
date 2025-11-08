@@ -223,7 +223,7 @@ main {
   border-radius: 0.9rem;
   text-align: left;
   color: #0f2027;
-  width: 50%;
+  width: 250rem;
   height: 200rem;
 }
 
@@ -250,6 +250,12 @@ main {
 .productCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px #0f2027;
+}
+
+.productsSection { 
+  display: grid;
+  grid-template-columns: 1fr 420px;    /*  remove if this breaks the layout */
+  gap: 24px;
 }
 
 /*FEATURED PRODUCTS*/
@@ -312,7 +318,38 @@ main {
   transform: scale(1.05);
 }
 
+.carouselViewport {
+  overflow: hidden;
+  width: 100%;
+}
 
+/* when script creates viewport it will use these classes */
+.carouselViewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselTrack {
+  position: relative;
+  display: block; 
+  height: 100%;
+}
+
+.carouselTrack .productCard {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px; 
+  margin-right: 20px; 
+  box-sizing: border-box;
+}
+
+/* adjust image sizing inside productCard */
+.productCard .productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
 
 
 
