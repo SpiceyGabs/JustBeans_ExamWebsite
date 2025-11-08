@@ -1,3 +1,7 @@
+
+const cards = document.querySelectorAll(
+  ".packageCard, .relatedCard, .productCard, .beanCard, .galleryGrid img"
+);
 const merchImgs = document.querySelectorAll(".merchImg");
 merchImgs.forEach((img, i) => {
   gsap.fromTo(

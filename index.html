@@ -175,50 +175,43 @@
         </div>
     </section>
 
-<!--Product Cards-->
-<section class="productsSecion" id="products">
-        <div class="productsSection grid">
-            <div class="productText">    
-            <h2 class="productHeading">Our Products</h2>
-
-    <div class="productCard" id="productCard">
-        <img src="./Images/fogValleyBean.png" alt="Fog Valley Coffee Bean in 800g packaging" class="productImage">
-        <h3>Sunrise Blend</h3>
-        <div class="productInfo" id="productInfo">
-            <p class="origin"  id="origin" >
-                            Origin:             Brazil (and latin America)</p>
-            <p class= "tastingNotes" id= "tastingNotes" >
-                            Tasting notes: Arabica, smooth and mellow flavor profile </p>
-            <p class="productPrice" id="productPrice" >
-                            Price: R120</p>
-        </div>
-         <p class="readMoreBtn">View Product </p>
-    </div>
-            </div>
-        </div>
-</section>
 
 
-<section class="productsSecion" id="products">
-        <div class="productsSection grid">
-            <div class="productText"> 
-     <div class="productCard" id="productCard">
-         <img src="./Images/sunriseBlend.png" alt="Sunrise Blend Coffee Bean in 800g packaging" class="productImage">
-        <h3>Fog Valley Bean</h3>
-        <div class="productInfo" id="productInfo">
-            <p class="origin"  id="origin" >
-                            Origin:  Brazil            </p>
-            <p class= "tastingNotes" id= "tastingNotes" >
-                            Tasting notes: Dark chocolate, nutty undertones, mandarin orange, toffee </p>
-            <p class="productPrice" id="productPrice" >
-                            Price: R160</p>
-        </div>
-         <p class="readMoreBtn">View Product</p>
-     </div>
-            </div>
-        </div>
-</section>
+
     
+<!-- Product Cards Section -->
+<section class="productsSection" id="products">
+  <h2 class="productHeading">Our Products</h2>
+
+  <div class="productGrid">
+    <!-- Product 1 -->
+    <div class="productCard">
+      <img src="./Images/fogValleyBean.png" alt="Fog Valley Coffee Bean in 800g packaging" class="productImage">
+      <h3>Fog Valley Bean</h3>
+      <div class="productInfo">
+        <p class="origin">Origin: Brazil</p>
+        <p class="tastingNotes">Tasting Notes: Dark chocolate, nutty undertones, mandarin orange, toffee</p>
+        <p class="productPrice">Price: R160</p>
+      </div>
+      <button class="addToCartBtn" data-product="Fog Valley Bean" data-price="160">Add to Cart</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="productCard">
+      <img src="./Images/sunriseBlend.png" alt="Sunrise Blend Coffee Bean in 800g packaging" class="productImage">
+      <h3>Sunrise Blend</h3>
+      <div class="productInfo">
+        <p class="origin">Origin: Brazil (and Latin America)</p>
+        <p class="tastingNotes">Tasting Notes: Arabica, smooth and mellow flavor profile</p>
+        <p class="productPrice">Price: R120</p>
+      </div>
+      <button class="addToCartBtn" data-product="Sunrise Blend" data-price="120">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+
+
 
 <section class="featuredProducts">
     <h2>Featured Products</h2>

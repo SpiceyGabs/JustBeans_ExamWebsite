@@ -65,7 +65,7 @@ display: grid;
 
 
 /* Base grid container */
-.packagingGrid, .beanJourneySection, .relatedGrid, .galleryGrid, .packedSection {
+.packagingGrid, .beanJourneySection, .relatedGrid, .galleryGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
   gap: 2rem; 
@@ -75,6 +75,59 @@ display: grid;
   width: 90%;
   max-width: 1200px;
 }
+
+.productGrid, .packagedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Product & Bean Cards */
+.productCard, .beanCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #faf3e7;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px #0b2239;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.productCard:hover, .beanCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px #0b2239;
+}
+
+/* Images */
+.productImage, .beanImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Info & Lists */
+.productInfo, .beanDetails {
+  text-align: left;
+  color: #0b2239;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.productInfo p, .beanDetails li {
+  margin: 0.25rem 0;
+}
+
 
 /* Card items */
 .packageCard,.relatedCard,.productCard {
@@ -158,17 +211,17 @@ display: grid;
 
 /* Responsiveness */
 @media (max-width: 1024px) {
-  .packagingGrid,.relatedGrid,.galleryGrid {
+  .packagingGrid,.relatedGrid,.galleryGrid,.productGrid, .packagedGrid   {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .packagingGrid,.relatedGrid,.galleryGrid {
+  .packagingGrid,.relatedGrid,.galleryGrid, .productGrid, .packagedGrid  {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 
-  .packagingImage,.relatedCard img, .galleryImg {
+  .packagingImage,.relatedCard img, .galleryImg ,.productImage, .beanImage {
     height: 240px;
   }
 }
