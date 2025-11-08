@@ -15,6 +15,11 @@
     <!-- <script defer src="../Scripts/navActive.js"></script> -->
     <script src="../Scripts/cart.js"></script>
     <script src="../Scripts/search.js"></script>
+
+    <!-- GSAP -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+      <script src="../GSAP/floatbeansGSAP.js" defer></script>
 </head>
 
 
@@ -40,7 +45,14 @@
 
 <main>
  <section class="beanJourneySection" id="beanJourney">
-        <h2>Explore Our Signature Beans</h2>
+    <!-- Floating beans oouu behind the text lets go-->
+    <div class="floatingBeans" aria-hidden="true">
+      <img src="../Images/bean1.png" alt="" class="floatBean beanA">
+      <img src="../Images/beans2.png" alt="" class="floatBean beanB">
+      <img src="../Images/bean3 Dark.png" alt="" class="floatBean beanC">
+    </div>
+
+        
 
         <!-- a bean from every region -->
          <!-- 1.BRAZIL -->
@@ -51,6 +63,7 @@
 
              <aside class="beanInfo">
           <h3>Brazilian Sunrise</h3>
+           <div class="floatingBeans" aria-hidden="true"> <img src="../Images/bean1.png" alt="Brazilian Coffee Bean" class="beanImage"></div>
           <ul class="beanDetails">
             <li class="location" id="brazil"> Region: Minas Gerais, Brazil</li>
             <li> Net Weight per bean: 135mg </li>
@@ -102,7 +115,7 @@
       <!-- cards -->
       <div class="packagingGrid">
         <div class="packageCard">
-          <img src="../Images/350g.png Dark.png" alt="small brown paper bag with the Justbeans logo and the word 350g" class="packagingImage">
+          <img src="../Images/350g.png" alt="small brown paper bag with the Justbeans logo and the word 350g" class="packagingImage">
           <h3>350g Bag</h3>
           <p>Perfect for a week’s worth of mornings. Compact, convenient, and sealed for freshness.</p>
           <p class="packagePrice">R120.00</p>
@@ -113,7 +126,7 @@
         </div>
 
         <div class="packageCard">
-          <img src="../Images/800g.png Dark.png" alt="medium sized, brown paper bag with see-through plastic partition and with the Justbeans logo and the word 800g" class="packagingImage">
+          <img src="../Images/800g.png" alt="medium sized, brown paper bag with see-through plastic partition and with the Justbeans logo and the word 800g" class="packagingImage">
           <h3>800g Bag</h3>
           <p>Our best-seller. A generous portion that balances volume and freshness.</p>
           <p class="packagePrice">R250.00</p>
@@ -124,7 +137,7 @@
         </div>
 
         <div class="packageCard">
-          <img src="../Images/2kg.png Dark.png" alt="a big white paper bag with the Justbeans logo and the words 2kg written in the front" class="packagingImage">
+          <img src="../Images/2kg.png" alt="a big white paper bag with the Justbeans logo and the words 2kg written in the front" class="packagingImage">
           <h3>2kg Bag</h3>
           <p>For coffee lovers and businesses. Pure, eco-conscious quality in every scoop.</p>
           <p class="packagePrice">R580.00</p>
