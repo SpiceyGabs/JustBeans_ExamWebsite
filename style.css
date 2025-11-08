@@ -142,11 +142,11 @@ main {
 /*ABOUT*/
 
 .aboutSection, .aboutContent {
- background-color: #faf3e7;
+ background-color: #3c2e27;
  border-radius: 2px;
  text-align: center;
  overflow: hidden;
- color: #072f1e;
+ color: #f5fbf8;
  margin: 10px 0 ;
  padding-bottom: 2px;
 }
@@ -160,7 +160,7 @@ main {
 .aboutContent {
   max-width: 800px;
   margin: 0 auto;
-  color: #3c2e27;
+  color: #faf3e7;
 }
 
 .aboutHeading {
@@ -168,15 +168,13 @@ main {
   /* font-weight: ; */
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
-  color: #3c2e27;
+  color: #faf3e7;
 }
 
 .aboutsection p {
   font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  opacity: 0;
-  color: #3c2e27;
   transform: translateY(50px);}
 
 
@@ -186,18 +184,20 @@ main {
 /*MAPS*/
 .mapsSection {
     margin-bottom: 10px;
-    background-color: #7e9ebe;
+    /* background-color: #7e9ebe; */
     transform: ease(0.3s, 20%);
-    padding-left: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 5px;
     text-align: center;
     color: #f1f1f1;
 
 }
 
 .map {
-  width: 100%;
+  width: 80%;
   height: 400px;
-  margin: 1.5rem auto;
+  margin: 2rem auto;
   border-radius: 10px;
   box-shadow: 0 5px 20px #0b2239
 

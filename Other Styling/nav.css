@@ -1,6 +1,6 @@
 #worldMap {
   width: 100%;
-  height: 450px;
+  height: 350px;
   border-radius: 12px;
   margin-top: 20px;
 }
@@ -118,12 +118,21 @@
 }
 
 /* About layout */
-.aboutContent {
-  display: flex;
-  flex-direction: column; /* mobile default */
-  gap: 20px;
+/*.aboutContent {
+   display: flex;
+  flex-direction: row; /* mobile default */
+ /* gap: 20px;
   align-items: center;
   padding: 24px;
+} */
+.aboutContent.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile: single column */
+  gap: 24px;
+  align-items: start;
+  padding: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* images container */
@@ -140,18 +149,21 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
-  display: block;
+   object-fit: cover;
+  box-shadow: 0 6px 18px #403220
 }
 
 /* Desktop layout */
 @media (min-width: 900px) {
   .aboutContent {
     flex-direction: row;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
     justify-content: space-between;
   }
   .aboutText {
-    flex: 1 1 50%;
+    /* flex:1 1 50%; */
+    flex: end;
     padding-right: 20px;
   }
   .aboutImages {
@@ -160,6 +172,25 @@
   }
   .aboutImg {
     max-height: 280px;
-    object-fit: cover;
+    object-fit: fill;
+  }
+}
+
+/* desktop: text left, images right */
+@media (min-width: 920px) {
+  .aboutContent.grid {
+    grid-template-columns: 1fr 420px; /* text gets flexible space, images column fixed-ish */
+    align-items: start;
+  }
+
+  .aboutText {
+    padding-right: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .aboutImages .aboutImg {
+    max-height: 240px; /* prevents huge images */
+    width: 100%;
   }
 }

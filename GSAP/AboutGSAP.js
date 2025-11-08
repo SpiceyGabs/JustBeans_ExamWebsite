@@ -23,7 +23,7 @@
     gsap.from(".teamImg", {
       x: -150,
       opacity: 0,
-      duration: 0.3,
+      duration: 3,
       ease: "power1.out",
       scrollTrigger: {
         trigger: ".teamImg",
@@ -36,7 +36,7 @@
     gsap.from(".cartImg", {
       x: 150,
       opacity: 0,
-      duration: 0.3,
+      duration: 3,
       ease: "power1.out",
       scrollTrigger: {
         trigger: ".cartImg",
