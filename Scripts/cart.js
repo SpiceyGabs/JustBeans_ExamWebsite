@@ -58,3 +58,20 @@
 //   }
 
 // //If the card declines or is invalid????????math.random????PAYMENT API'S BRUHHH omg
+
+async trackOrder(orderData) {
+    try {
+        const response = await fetch('http://localhost:3000/orders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(orderData)
+        });
+        return await response.json();
+    } catch (error) {
+        console.error('API Error:', error);
+        // Fallback to localStorage
+        this.saveOrderToLocalStorage(orderData);
+    }
+}
