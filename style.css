@@ -223,6 +223,8 @@ main {
   border-radius: 0.9rem;
   text-align: left;
   color: #0f2027;
+  width: 50%;
+  height: 200rem;
 }
 
 .products h2, h3 {
