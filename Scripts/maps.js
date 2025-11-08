@@ -67,29 +67,3 @@ if (worldMapContainer) {
   });
 }
 
-
-// MAP 2 - South Africa Local Stores
-const localMapContainer = document.getElementById("worldMap2");
-
-if (localMapContainer) {
-  const map2 = L.map('worldMap2').setView([-28.4793, 24.6727], 5);
-
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 12,
-  }).addTo(map2);
-
-  const distributors = [
-    { name: "Woolworths Sandton City Mall", coords: [-26.1074, 28.0567] },
-    { name: "Woolworths Bryanston", coords: [-26.0563, 28.0166] },
-    { name: "Spar Hartebeespoort", coords: [-25.7339, 27.8903] },
-    { name: "Woolworths Menlyn Mall", coords: [-25.7843, 28.2775] },
-    { name: "Woolworths Knysna", coords: [-34.0358, 23.0469] },
-    { name: "Woolworths V&A Waterfront", coords: [-33.9076, 18.4206] }
-  ];
-
-  distributors.forEach(store => {
-    L.marker(store.coords)
-      .addTo(map2)
-      .bindPopup(`<b>${store.name}</b><br>JustBeans stocked here!`);
-  });
-}
